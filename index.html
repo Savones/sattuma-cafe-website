@@ -11,23 +11,33 @@
 
     <body>
 
-        <div class="home-view">
+        <nav class="nav-bar" id="navbar">
+            <ul>
+                <li class="home-link"><a href="#home">Home</a></li>
+                <li class="menu-link"><a href="#menu">Menu</a></li>
+                <li class="about-link"><a href="#about">About</a></li>
+                <li class="events-link"><a href="#events">Events</a></li>
+                <li class="contact-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="home-view" id="home">
             <img class="home_img" src="images/coffee-machine.jpg" alt="coffee-machine">
             <div class="border"></div>
             <div class="sattuma-text">S<br>a<br>t<br>t<br>u<br>m<br>a</div>
             <div class="cafe-text">Café</div>
-            <div class="nav-bar">
+            <nav class="home-nav-bar">
                 <ul>
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#menu">Menu</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#events">Events</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                    <li class="home-link"><a href="#home">Home</a></li>
+                    <li class="menu-link"><a href="#menu">Menu</a></li>
+                    <li class="about-link"><a href="#about">About</a></li>
+                    <li class="events-link"><a href="#events">Events</a></li>
+                    <li class="contact-link"><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
         
-        <div class="menu-view">
+        <div class="menu-view" id="menu">
             <div class="menu-text">M<br>e<br>n<br>u</div>
             <div class="menu-grid">
                 <div class="menu-item">
@@ -61,7 +71,7 @@
             </div>
         </div>
 
-        <div class="about-view">
+        <div class="about-view" id="about">
             <img class="interior-img" src="images/blurred-interior.jpg" alt="interior-img">
             <div class="about-container">
                 <div class="about-header">What we are about</div>
@@ -75,7 +85,7 @@
             </div>
         </div>
 
-        <div class="events-view">
+        <div class="events-view" id="events">
             <div>
                 <img class="events-img" src="images/barista.jpg" alt="barista">
             </div>
@@ -92,9 +102,12 @@
             </div>
         </div>
 
-        <div class="contact-view">
+        <div class="contact-view" id="contact">
             <img  class="contact-img" src="images/chocolate.jpg" alt="chocolate">
         </div>
+
+        <script src="js/logic.js"></script>
+
     </body>
 
 </html>

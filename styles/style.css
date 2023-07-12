@@ -1,4 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    position: relative;
     display: block;
     background-color: #242222;
     margin: 0;
@@ -13,13 +18,12 @@ p {
  .events-view, .contact-view{
     display: flex;
     position: relative;
-    /* border: 1px solid red; */
     color: aliceblue;
 }
 
-/* nav bar */
+/* nav bar for home page */
 
-.nav-bar {
+.home-nav-bar {
     position: absolute;
     top: 0;
     right: 0;
@@ -31,14 +35,51 @@ p {
     background-color: rgba(234, 112, 51, 0.85);
   }
   
-  .nav-bar ul {
+  .home-nav-bar ul {
     list-style-type: none;
     padding: 0;
     padding-top: 15%;
   }
   
+  .home-nav-bar li {
+    margin-bottom: 15%;
+  }
+  
+  .home-nav-bar a {
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2vw;
+    transition: 0.3s;
+  }
+
+  .home-nav-bar a:hover {
+    color: #ffff;
+  }
+
+/* nav bar for scrolling */
+  
+.nav-bar {
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    display: flex;
+    background-color: rgba(234, 112, 51, 0.9);
+    justify-content: center;
+  }
+  
+  .nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .nav-bar li {
-    margin-bottom: 30px;
+    padding: 5%;
+    display: flex;
   }
   
   .nav-bar a {
@@ -46,12 +87,18 @@ p {
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
+    font-size: 2vw;
   }
-
+  
   .nav-bar a:hover {
-    color: #ffff;
+    color: #ffffff;
   }
 
+.hidden {
+    display: none;
+}
+  
+  
 /* home page */
 
 .home_img {
@@ -89,8 +136,8 @@ p {
 
 .menu-view {
     justify-content: center;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 15%;
+    padding-bottom: 15%;
 }
 
 .menu-text {
@@ -174,7 +221,7 @@ p {
     justify-content: center;
     position: absolute;
     width: 75%;
-    height: 65%;
+    height: 70%;
     background-color: rgba(15, 11, 49, 0.8);
 }
 
@@ -222,8 +269,8 @@ p {
 /* events page */
 
 .events-view {
-    padding-top: 8%;
-    padding-bottom: 8%;
+    padding-top: 15%;
+    padding-bottom: 15%;
     padding-left: 4%;
     padding-right: 4%;
     justify-content: space-between;
@@ -263,7 +310,7 @@ p {
     border: none;
     position: absolute;
     margin-top: 35%;
-    height: 12%;
+    height: 10%;
     width: 25%;
     font-size: 2.2vw;
     text-transform: uppercase;
