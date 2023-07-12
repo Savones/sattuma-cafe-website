@@ -12,6 +12,7 @@ function toggleNavbar() {
   }
 }
 
+// Hide the navbar on page load
+navbar.classList.add('hidden');
+
 window.addEventListener('scroll', toggleNavbar);
-
-
