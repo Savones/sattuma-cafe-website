@@ -6,12 +6,13 @@ body {
     position: relative;
     display: block;
     background-color: #242222;
-    margin: 0;
+    margin: 0 auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 p {
     margin: 0;
+    font-size: 16px;
 }
 
 .home-view, .menu-view, .about-view,
@@ -19,6 +20,12 @@ p {
     display: flex;
     position: relative;
     color: aliceblue;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.home-view {
+    max-width: none;
 }
 
 /* nav bar for home page */
@@ -49,7 +56,7 @@ p {
     color: #000000;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 2vw;
+    font-size: 1em;
     transition: 0.3s;
   }
 
@@ -87,17 +94,29 @@ p {
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
-    font-size: 2vw;
+    font-size: 1em;
   }
   
-  .nav-bar a:hover {
+  .nav-bar a:hover{
     color: #ffffff;
   }
+
+.nav-bar a.active,
+.home-nav-bar a.active {
+  background-color: #ffffff;
+  color: #000000;
+}
 
 .hidden {
     display: none;
 }
-  
+
+@media only screen and (max-width: 768px) {
+    .nav-bar li {
+      margin: 0 5px;
+    }
+  }
+
   
 /* home page */
 
@@ -119,7 +138,7 @@ p {
     align-self: center;
     left: 10%;
     position: absolute;
-    font-size: 6.5vw;
+    font-size: 5.5vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
 }
@@ -128,7 +147,7 @@ p {
     bottom: 10%;
     left: 59%;
     position: absolute;
-    font-size: 8vw;
+    font-size: 7vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -136,8 +155,8 @@ p {
 
 .menu-view {
     justify-content: center;
-    padding-top: 15%;
-    padding-bottom: 15%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .menu-text {
@@ -148,7 +167,7 @@ p {
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
-    font-size: 8vw;
+    font-size: 7em;
     text-transform: uppercase;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -175,14 +194,14 @@ p {
 }
 
 .item-header {
-    font-size: 3vw;
+    font-size: 3.5em;
     text-transform: uppercase;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .hidden-text {
     margin-top: 4%;
-    font-size: 2vw;
+    font-size: 1em;
 }
 
 .menu-item:hover .item-text {
@@ -220,15 +239,15 @@ p {
     display: flex;
     justify-content: center;
     position: absolute;
-    width: 75%;
-    height: 70%;
+    width: clamp(0px, 75%, 1000px);
+    height: clamp(0px, 70%, 550px);
     background-color: rgba(15, 11, 49, 0.8);
 }
 
 .about-header {
     position: absolute;
     padding-top: 10%;
-    font-size: 5.5vw;
+    font-size: 3.5em;
     text-transform: uppercase;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -237,17 +256,16 @@ p {
     position: absolute;
     text-align: center;
     padding-top: 25%;
-    width: 75%;
-    font-size: 2vw;
+    width: clamp(0px, 75%, 600px);
+    font-size: 1.2em;
 }
 
 .about-button {
     border: none;
     position: absolute;
     margin-top: 42%;
-    height: 18%;
-    width: 30%;
-    font-size: 2.5vw;
+    padding: 2%;
+    font-size: 1.5em;
     text-transform: uppercase;
     background-color: rgba(234, 112, 51, 0.85);
     color: #ffff;
@@ -269,55 +287,58 @@ p {
 /* events page */
 
 .events-view {
-    padding-top: 15%;
-    padding-bottom: 15%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     padding-left: 4%;
     padding-right: 4%;
-    justify-content: space-between;
+    justify-content: center;
+    max-width: 1200px;
 }
 
 .events-img {
-    width: 30vw; 
-    height: 45vw; 
+    width: 500px;
+    height: 750px; 
     object-fit: cover; 
     object-position: 60% 40%;
+    margin-right: 2vw;
 }
 
 .event-border {
     display: flex;
     justify-content: center;
     width: 60%;
-    height: 45vw;
+    height: auto;
     border: 2px solid #ffff;
 }
 
 .events-header {
-    margin-top: 5%;
-    font-size: 5vw;
+    position: absolute;
+    margin-top: 7%;
+    font-size: 3.5em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgba(234, 112, 51, 1);
 }
 
 .events-paragraph {
-    margin-top: 12%;
+    align-self: center;
     position: absolute;
     text-align: center;
-    width: 43%;
-    font-size: 2vw;
+    width: clamp(0px, 43%, 450px);
+    font-size: 1.3em;
 }
 
 .event-button {
     border: none;
-    position: absolute;
-    margin-top: 35%;
-    height: 10%;
-    width: 25%;
-    font-size: 2.2vw;
+    position: relative;
+    padding: 4%;
+    font-size: 1.5em;
     text-transform: uppercase;
     color: #ffff;
     background-color: #242222;
     border: 2px solid #ffff;
     transition: 0.5s;
+    align-self: flex-end;
+    bottom: 8%;
 }
 
 .event-button:hover {
@@ -330,4 +351,76 @@ p {
 .contact-img {
     width: 100%;
     object-fit: cover; 
+}
+
+/* footer */
+
+.footer {
+    background-color: #242222;
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    margin: 8px 0;
+  }
+  
+  .footer p {
+    font-size: 1em;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer p:hover {
+    text-decoration: underline;
+  }
+  
+@media (max-width: 1200px) {
+
+    .nav-bar li, .home-nav-bar li, .footer p {
+        font-size: 1.5vw;
+    }
+
+    .menu-text {
+        font-size: 8vw;
+    }
+
+    .item-header {
+        font-size: 4vw;
+    }
+    
+    .about-header {
+        font-size: 4.5vw;
+    }
+    .about-paragraph {
+        font-size: 2vw;
+    }
+    .about-button {
+        font-size: 2.5vw;
+    }
+
+    .events-header {
+        font-size: 4.5vw;
+    }
+
+    .events-paragraph {
+        font-size: 1.8vw;
+    }
+
+    .event-button {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 1700px) {
+    .events-img {
+        width: 30vw; 
+        height: 45vw;
+    }
 }
