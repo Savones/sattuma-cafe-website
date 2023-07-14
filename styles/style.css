@@ -28,41 +28,6 @@ p {
     max-width: none;
 }
 
-/* nav bar for home page */
-
-.home-nav-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 15%;
-    height: 100%;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
-    background-color: rgba(234, 112, 51, 0.85);
-  }
-  
-  .home-nav-bar ul {
-    list-style-type: none;
-    padding: 0;
-    padding-top: 15%;
-  }
-  
-  .home-nav-bar li {
-    margin-bottom: 15%;
-  }
-  
-  .home-nav-bar a {
-    color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1em;
-    transition: 0.3s;
-  }
-
-  .home-nav-bar a:hover {
-    color: #ffff;
-  }
 
 /* nav bar for scrolling */
   
@@ -101,15 +66,35 @@ p {
     color: #ffffff;
   }
 
-.nav-bar a.active,
-.home-nav-bar a.active {
-  background-color: #ffffff;
-  color: #000000;
+.hidden {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    background-color: rgba(234, 112, 51, 0.85);
 }
 
-.hidden {
-    display: none;
+.ul-list-hidden {
+    list-style-type: none;
+    padding-top: 15%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-nav-bar li {
+    margin-bottom: 15%;
+  }
+
+.nav-bar a.active,
+.nav-bar .active .nav-link {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
+
 
 @media only screen and (max-width: 768px) {
     .nav-bar li {
