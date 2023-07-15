@@ -1,7 +1,6 @@
 const navbar = document.getElementById('navbar');
 const homeSection = document.getElementById('home');
 const ulList = document.getElementById('ul-list');
-const navLink = document.getElementById('nav-link');
 const navLinks = ulList.querySelectorAll('a');
 const scrollOffset = 100; // Adjust this value as needed
 
