@@ -12,7 +12,7 @@ body {
 }
 
 div {
-    font-family: 'Coral Lovers',Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 p {
@@ -132,7 +132,7 @@ p {
     align-self: center;
     left: 10%;
     position: absolute;
-    font-size: 7vw;
+    font-size: 6vw;
     text-transform: uppercase;
 }
 
@@ -140,7 +140,7 @@ p {
     bottom: 10%;
     left: 59%;
     position: absolute;
-    font-size: 8vw;
+    font-size: 7vw;
 }
 
 /* menu page */
@@ -302,7 +302,7 @@ p {
 
 .events-header {
     position: absolute;
-    margin-top: 6%;
+    margin-top: 5%;
     font-size: 4em;
     color: rgba(234, 112, 51, 1);
 }
@@ -323,7 +323,7 @@ p {
     text-transform: uppercase;
     color: #ffff;
     background-color: #242222;
-    border: 1px solid rgba(234, 112, 51, 1);
+    border: 1px solid rgb(255, 255, 255);
     transition: 0.5s;
     align-self: flex-end;
     bottom: 7%;
