@@ -51,21 +51,58 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Login
+   // Login form toggle
   const userIcon = document.getElementById('userIcon');
   const loginFormContainer = document.getElementById('loginFormContainer');
   const closeButton = document.getElementById('closeButton');
+  const loginButton = document.getElementById('loginButton');
+  const registerButton = document.getElementById('registerButton');
+  const loginForm = document.getElementById('loginForm');
+  const registerForm = document.getElementById('registerForm');
+
+  function setActiveButton(button) {
+    loginButton.classList.remove('active');
+    registerButton.classList.remove('active');
+    button.classList.add('active');
+  }
+
+  function showLoginForm() {
+    loginForm.style.display = 'flex';
+    registerForm.style.display = 'none';
+  }
+
+  function showRegisterForm() {
+    registerForm.style.display = 'flex';
+    loginForm.style.display = 'none';
+  }
 
   userIcon.addEventListener('click', function(event) {
     event.preventDefault(); // Prevent default link behavior
     loginFormContainer.style.display = 'flex';
     document.body.classList.add('login-form-open');
+    setActiveButton(loginButton);
+    showLoginForm();
   });
 
   closeButton.addEventListener('click', function() {
     loginFormContainer.style.display = 'none';
     document.body.classList.remove('login-form-open');
   });
+
+  loginButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    setActiveButton(loginButton);
+    showLoginForm();
+  });
+
+  registerButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    setActiveButton(registerButton);
+    showRegisterForm();
+  });
+
+  // Hide the login form on page load
+  loginFormContainer.style.display = 'none';
 
   // Hide the navbar on page load
   navbar.classList.add('hidden');
@@ -74,5 +111,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', toggleNavbar);
   window.addEventListener('resize', toggleNavbar);
-
 });

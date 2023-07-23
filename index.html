@@ -31,21 +31,32 @@
         </nav>
 
         <!-- Login form -->
-        
+
         <div class="login-form-container" id="loginFormContainer">
             <div class="login-form">
-                <button class="close-button" id="closeButton">&times;</button>
-                <div class="buttons-login">
-                    <button class="login-header active">Login</button>
-                    <button class="register-header">Register</button>
-                </div>
-                <form>
-                    <input type="text" id="username" name="username" placeholder="Username">
-                    <input type="password" id="password" name="password" placeholder="Password">
-                    <button class="login-button" type="submit">Login</button>
-                </form>
+            <button class="close-button" id="closeButton">&times;</button>
+            <div class="buttons-login">
+                <!-- Set IDs for the login and register buttons -->
+                <button class="login-header active" id="loginButton">Login</button>
+                <button class="register-header" id="registerButton">Register</button>
+            </div>
+            <form id="loginForm">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <button class="login-button" type="submit">Login</button>
+            </form>
+            <form id="registerForm" style="display: none;">
+                <input type="text" id="regUsername" name="regUsername" placeholder="Username">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="password" id="regPassword" name="regPassword" placeholder="Password">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                <button class="login-button" type="submit">Register</button>
+            </form>
             </div>
         </div>
+  
+  
+
           
         <!-- Home section -->
 
