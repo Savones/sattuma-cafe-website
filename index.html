@@ -6,11 +6,14 @@
             Sattuma Cafe
         </title>
         <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
 
     <body>
+
+        <!-- Navbar -->
 
         <nav class="nav-bar" id="navbar">
             <ul id="ul-list">
@@ -20,8 +23,31 @@
               <li class="events-link"><a href="#events" class="nav-link">Events</a></li>
               <li class="contact-link"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-          </nav>
+            <ul class="icon-link" id="icon-list">
+              <li><a href="#"><i class="fas fa-search"></i></a></li>
+              <li><a href="#" id="userIcon"><i class="fas fa-user"></i></a></li>
+              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+
+        <!-- Login form -->
+        
+        <div class="login-form-container" id="loginFormContainer">
+            <div class="login-form">
+                <button class="close-button" id="closeButton">&times;</button>
+                <div class="buttons-login">
+                    <button class="login-header active">Login</button>
+                    <button class="register-header">Register</button>
+                </div>
+                <form>
+                    <input type="text" id="username" name="username" placeholder="Username">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <button class="login-button" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
           
+        <!-- Home section -->
 
         <div class="home-view" id="home">
             <img class="home_img" src="images/coffee-machine.jpg" alt="coffee-machine">
@@ -29,6 +55,8 @@
             <div class="sattuma-text">S<br>a<br>t<br>t<br>u<br>m<br>a</div>
             <div class="cafe-text">Café</div>
         </div>
+
+        <!-- Menu section -->
         
         <div class="menu-view" id="menu">
             <div class="menu-text">M<br>e<br>n<br>u</div>
@@ -64,6 +92,8 @@
             </div>
         </div>
 
+        <!-- About section -->
+
         <div class="about-view" id="about">
             <img class="interior-img" src="images/blurred-interior.jpg" alt="interior-img">
             <div class="about-container">
@@ -79,6 +109,8 @@
                 <button class="about-button">Learn more</button>
             </div>
         </div>
+
+        <!-- Events section -->
 
         <div class="events-view" id="events">
             <div>
@@ -98,6 +130,8 @@
                 <button class="event-button">Event packages</button>
             </div>
         </div>
+
+        <!-- Contact section -->
 
         <div class="contact-view" id="contact">
             <img  class="contact-img" src="images/chocolate.jpg" alt="chocolate">
