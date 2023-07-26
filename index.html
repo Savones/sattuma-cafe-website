@@ -29,31 +29,6 @@
               <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
-
-        <!-- Login form -->
-
-        <div class="login-form-container" id="loginFormContainer">
-            <div class="login-form">
-            <button class="close-button" id="closeButton">&times;</button>
-            <div class="buttons-login">
-                <!-- Set IDs for the login and register buttons -->
-                <button class="login-header active" id="loginButton">Login</button>
-                <button class="register-header" id="registerButton">Register</button>
-            </div>
-            <form id="loginForm">
-                <input type="text" id="username" name="username" placeholder="Username">
-                <input type="password" id="password" name="password" placeholder="Password">
-                <button class="login-button" type="submit">Login</button>
-            </form>
-            <form id="registerForm" style="display: none;">
-                <input type="text" id="regUsername" name="regUsername" placeholder="Username">
-                <input type="email" id="email" name="email" placeholder="Email">
-                <input type="password" id="regPassword" name="regPassword" placeholder="Password">
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
-                <button class="login-button" type="submit">Register</button>
-            </form>
-            </div>
-        </div>
   
         <!-- Home section -->
 
@@ -147,8 +122,25 @@
         <!-- Contact section -->
 
         <div class="contact-view" id="contact">
-            <img  class="contact-img" src="images/chocolate.jpg" alt="chocolate">
+            <div class="contact-container">
+                <img  class="contact-img" src="images/contact-img.jpg" alt="chocolate">
+                <div class="contact-textbox">
+                    <div class="contact-text">
+                        <h1>Contact us</h1>
+                        <p>+358 12345678</p>
+                        <p>info.sattumacafe@gmail.com</p>
+                        <form>
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Email">
+                            <textarea placeholder="Message"></textarea>
+                            <button class="login-button send-button" type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Footer -->
 
         <footer class="footer">
             <div class="footer-content">
@@ -158,6 +150,30 @@
               <p>Phone: +1 123-456-7890</p>
             </div>
         </footer>
+
+        <!-- Login form -->
+
+        <div class="login-form-container" id="loginFormContainer">
+            <div class="login-form">
+            <button class="close-button" id="closeButton">&times;</button>
+            <div class="buttons-login">
+                <button class="login-header active" id="loginButton">Login</button>
+                <button class="register-header" id="registerButton">Register</button>
+            </div>
+            <form id="loginForm">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <button class="login-button" type="submit">Login</button>
+            </form>
+            <form id="registerForm" style="display: none;">
+                <input type="text" id="regUsername" name="regUsername" placeholder="Username">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="password" id="regPassword" name="regPassword" placeholder="Password">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                <button class="login-button" type="submit">Register</button>
+            </form>
+            </div>
+        </div>
           
 
         <script src="js/logic.js"></script>
