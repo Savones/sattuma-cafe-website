@@ -481,9 +481,10 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.772);
+    background-color: rgba(0, 0, 0, 0.59);
     height: 100%;
-    width: 45%;
+    width: 50%;
+    backdrop-filter: blur(3px);
 }
 
 .contact-text {
@@ -492,8 +493,12 @@ p {
     font-size: 1.3em;
 }
 
+.contact-text p {
+    padding: 2%;
+}
+
 .contact-text h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     text-transform: uppercase;
 }
 
@@ -501,24 +506,20 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10%;
 }
     
-form input {
+form input, form textarea {
     display: block;
-    margin: 10px;
-    padding: 10px;
+    margin: 5%;
+    padding: 2%;
     border-style: none;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 form textarea {
-    display: block;
-    border-style: none;
-    font-size: 1.3em;
-    margin: 10px;
-    padding: 10px;
-    width: 100%;
-    height: 200px;
+    width: 110%;
+    height: 8em;
     resize: none;
     overflow-wrap: break-word;
     white-space: pre-wrap;
@@ -527,6 +528,15 @@ form textarea {
 .contact-img {
     width: 100%;
     object-fit: cover; 
+}
+
+.send-button {
+    background-color: rgba(234, 112, 51, 1);
+    margin-top: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* footer */
@@ -559,6 +569,10 @@ form textarea {
   
 @media (max-width: 1200px) {
 
+    form textarea {
+        height: 4em;
+    } 
+
     .login-header, .register-header, .close-button {
         font-size: 3vw;
     }
@@ -567,7 +581,7 @@ form textarea {
         font-size: 2.3vw;
     }
 
-    .login-form input, .schedule {
+    .login-form input, .schedule, .contact-text {
         font-size: 2vw;
     }
 
@@ -597,7 +611,7 @@ form textarea {
         font-size: 2.5vw;
     }
 
-    .events-header {
+    .events-header, .contact-text h1 {
         font-size: 5.5vw;
     }
 
